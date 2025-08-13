@@ -67,40 +67,107 @@
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About Section - NOSOTROS -->
     <section class="about section" id="about">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Nosotros</h2>
-                <p class="section-subtitle">Empresa Líder en Software Educativo</p>
+                <h2 class="section-title">NOSOTROS</h2>
                 <div class="section-divider"></div>
             </div>
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Equipo ORVEX">
+            
+            <div class="about-content-wrapper">
+                <div class="about-main-content">
+                    <div class="about-intro">
+                        <div class="about-intro-content">
+                            <h3 class="subsection-title">¿QUIÉNES SOMOS?</h3>
+                            <p>En <span class="highlight">ORVEX SOLUTIONS</span> somos un equipo apasionado por la tecnología y la innovación. Combinamos el desarrollo de software, el modelado 3D y la realidad virtual para crear soluciones digitales únicas que transforman ideas en experiencias impactantes.</p>
+                            <div class="innovation-grid">
+                                <div class="innovation-item">
+                                    <i class="fas fa-code"></i>
+                                    <span>Desarrollo de Software</span>
+                                </div>
+                                <div class="innovation-item">
+                                    <i class="fas fa-cube"></i>
+                                    <span>Modelado 3D</span>
+                                </div>
+                                <div class="innovation-item">
+                                    <i class="fas fa-vr-cardboard"></i>
+                                    <span>Realidad Virtual</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about-3d-container" id="model3d-container">
+                            <!-- Modelo 3D se cargará aquí -->
+                            <canvas id="3d-canvas"></canvas>
+                            <div class="model-loading">
+                                <div class="loading-spinner"></div>
+                                <p>Cargando tecnología 3D...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mission-vision">
+                        <div class="mission-card">
+                            <div class="mv-icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <h3>MISIÓN</h3>
+                            <p>Desarrollar soluciones tecnológicas innovadoras en software, modelado 3D y realidad virtual que optimicen procesos, potencien la creatividad y generen experiencias inmersivas de alto valor para nuestros clientes.</p>
+                            <div class="mv-decoration"></div>
+                        </div>
+                        
+                        <div class="vision-card">
+                            <div class="mv-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <h3>VISIÓN</h3>
+                            <p>Ser una empresa líder en el sector tecnológico, reconocida a nivel nacional e internacional por la calidad, innovación y valor de nuestras soluciones en software, entornos 3D y experiencias de realidad virtual.</p>
+                            <div class="mv-decoration"></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="about-text">
-                    <h3>ORVEX SOLUTIONS</h3>
-                    <p>Somos pioneros en el desarrollo de software educativo interactivo que transforma la manera de aprender y enseñar. Nuestra tecnología 3D permite a los estudiantes experimentar conceptos complejos de manera intuitiva y visual.</p>
-                    <p>Desde 2018, hemos trabajado con las principales instituciones educativas del país, desarrollando soluciones personalizadas que mejoran significativamente los resultados de aprendizaje.</p>
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <span class="stat-number" data-count="120">0</span>+
-                            <span class="stat-text">Instituciones</span>
+
+                <div class="values-section">
+                    <h3 class="subsection-title">NUESTROS VALORES</h3>
+                    <div class="values-grid">
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <h4>Innovación</h4>
+                            <p>Buscamos constantemente nuevas formas de resolver problemas y crear experiencias únicas.</p>
                         </div>
-                        <div class="stat-item">
-                            <span class="stat-number" data-count="500">0</span>+
-                            <span class="stat-text">Simulaciones</span>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-hands-helping"></i>
+                            </div>
+                            <h4>Colaboración</h4>
+                            <p>Trabajamos en equipo y con nuestros clientes para lograr los mejores resultados.</p>
                         </div>
-                        <div class="stat-item">
-                            <span class="stat-number" data-count="25">0</span>+
-                            <span class="stat-text">Expertos</span>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-medal"></i>
+                            </div>
+                            <h4>Excelencia</h4>
+                            <p>Nos comprometemos con la más alta calidad en cada proyecto que emprendemos.</p>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h4>Pasión</h4>
+                            <p>Amamos lo que hacemos y eso se refleja en nuestro trabajo diario.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Three.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="3d-model.js"></script>
+    <script src="main.js"></script>
 
     <!-- Portfolio Section -->
     <section class="portfolio section" id="portfolio">

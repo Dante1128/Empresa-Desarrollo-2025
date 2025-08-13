@@ -148,6 +148,38 @@ if (newsletterForm) {
     });
 }
 
+let currentSlide = 0;
+        const totalSlides = 2;
+        const track = document.getElementById('carouselTrack');
+        const indicators = document.querySelectorAll('.indicator');
+
+        function updateCarousel() {
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            
+            indicators.forEach((indicator, index) => {
+                indicator.classList.toggle('active', index === currentSlide);
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateCarousel();
+        }
+
+        function previousSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateCarousel();
+        }
+
+        // Auto-advance every 3 seconds
+        setInterval(nextSlide, 3000);
+
+
 // Crear partículas de fondo
 function createParticles() {
   const container = document.getElementById('servicesParticles');
@@ -176,3 +208,4 @@ function createParticles() {
 }
 
 document.addEventListener('DOMContentLoaded', createParticles);
+

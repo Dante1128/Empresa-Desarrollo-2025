@@ -54,7 +54,6 @@
                 <p class="hero-subtitle">Estudio de desarrollo especializado en tecnologias inmersivas. Nuestro proyecto piloto lleva laboratorios de física virtuales a instituciones educativas del país.</p>
                 <div class="hero-buttons">
                     <a href="#contact" class="btn btn-primary">Contáctanos</a>
-                    <a href="#services" class="btn btn-secondary">Nuestra Tecnología</a>
                 </div>
             </div>
             <div class="hero-image">
@@ -180,29 +179,28 @@
         </header>
 
        
-        <div class="portfolio-filter" role="tablist">
-            <button class="filter-btn active" role="tab" data-filter="all">Todos</button>
-            <button class="filter-btn" role="tab" data-filter="education">Educación</button>
-            <button class="filter-btn" role="tab" data-filter="vr">Realidad Virtual</button>
-        </div>
-
+       
         <div class="portfolio-grid">
             <!-- Proyecto 1 -->
-            <article class="portfolio-item" data-category="education">
-                <figure class="portfolio-img">
-                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1470&q=80" 
-                         alt="Vista previa del Laboratorio Virtual de Física" loading="lazy">
-                    <figcaption class="portfolio-overlay">
-                        <div class="portfolio-info">
-                            <h3>Laboratorio Virtual de Física</h3>
-                            <p>Aprendizajes interactivos de Física, con un enfoque práctico y visual</p>
-                            <a href="https://inquisitive-fairy-7f2c8e.netlify.app/" class="portfolio-link" aria-label="Ver proyecto Laboratorio Virtual de Física">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                        </div>
-                    </figcaption>
-                </figure>
-            </article>
+           <article class="portfolio-item" data-category="education">
+    <figure class="portfolio-img">
+        <iframe 
+            src="https://inquisitive-fairy-7f2c8e.netlify.app/" 
+            loading="lazy" 
+            style="width:100%; height:300px; border:none; border-radius:8px;">
+        </iframe>
+        <figcaption class="portfolio-overlay">
+            <div class="portfolio-info">
+                <h3>Laboratorio Virtual de Física</h3>
+                <p>Aprendizajes interactivos de Física, con un enfoque práctico y visual</p>
+                <a href="https://inquisitive-fairy-7f2c8e.netlify.app/" class="portfolio-link" aria-label="Ver proyecto Laboratorio Virtual de Física" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+        </figcaption>
+    </figure>
+</article>
+
 
             <!-- Proyecto 2 -->
             <article class="portfolio-item" data-category="vr">
@@ -305,10 +303,23 @@
                         <div class="info-icon">
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
-                        <div class="info-text">
-                            <h3>Dirección</h3>
-                            <p>Av. Tecnológica 4567, Piso 12<br>San Isidro, Lima, Perú</p>
-                        </div>
+                            <div class="map-container">
+                                    <h3 class="map-title">Dirección</h3>
+                                    <p class="map-address">Sopocachi, Rosendo Gutiérrez Nro 4567</p>
+                                    <iframe 
+                                        class="map-frame"
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3819.4434061450464!2d-68.129861!3d-16.511389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f205a5d3e2e19%3A0x0!2zMTbCsDMwJzQxLjAiUyA2OMKwMDcnNDcuNSJX!5e0!3m2!1ses!2sbo!4v1723542000000!5m2!1ses!2sbo" 
+                                        width="100%" 
+                                        height="180" 
+                                        allowfullscreen 
+                                        loading="lazy" 
+                                        referrerpolicy="no-referrer-when-downgrade">
+                                    </iframe>
+                                </div>
+
+
+
+
                     </div>
                     <div class="info-item">
                         <div class="info-icon">
@@ -316,8 +327,8 @@
                         </div>
                         <div class="info-text">
                             <h3>Teléfono</h3>
-                            <p>+51 987 654 321</p>
-                            <p>+51 1 765 4321</p>
+                            <p>+591 7765489</p>
+                            <p>+591 7754325</p>
                         </div>
                     </div>
                     <div class="info-item">
@@ -330,16 +341,7 @@
                             <p>ventas@orvexsolutions.com</p>
                         </div>
                     </div>
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div class="info-text">
-                            <h3>Horario</h3>
-                            <p>Lunes - Viernes: 8am - 6pm</p>
-                            <p>Sábados: 9am - 1pm</p>
-                        </div>
-                    </div>
+                    
                 </div>
                 <div class="contact-form">
                     <form id="contactForm">
@@ -364,7 +366,7 @@
                         <div class="form-group">
                             <textarea id="message" name="message" rows="5" placeholder="Tu mensaje" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                        <button type="submit" class="btn btn-primary">Enviar </button>
                     </form>
                 </div>
             </div>
@@ -409,7 +411,7 @@
                 <button class="carousel-controls prev" onclick="previousSlide()">‹</button>
                 <button class="carousel-controls next" onclick="nextSlide()">›</button>
                 <div class="footer-newsletter">
-                    <h3>Newsletter</h3>
+                    <h3>Boletín</h3>
                     <p>Suscríbete para recibir nuestras últimas noticias y ofertas.</p>
                     <form id="newsletterForm">
                         <input type="email" placeholder="Tu correo electrónico" required>

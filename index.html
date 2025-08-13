@@ -103,53 +103,57 @@
     </section>
 
     <!-- Portfolio Section -->
-    <section class="portfolio section" id="portfolio">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Portafolio</h2>
-                <p class="section-subtitle">Nuestras soluciones en acción</p>
-                <div class="section-divider"></div>
-            </div>
-            <div class="portfolio-grid">
-                <div class="portfolio-item" data-category="education">
-                    <div class="portfolio-img">
-                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Simulación de Física">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-info">
-                                <h3>Laboratorio Virtual de Física</h3>
-                                <p>Simulaciones interactivas de mecánica clásica</p>
-                                <a href="#" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item" data-category="education">
-                    <div class="portfolio-img">
-                        <img src="https://images.unsplash.com/photo-1635070040857-9fadf23b0a90?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Simulación de Química">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-info">
-                                <h3>Química Molecular 3D</h3>
-                                <p>Visualización interactiva de estructuras moleculares</p>
-                                <a href="#" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item" data-category="education">
-                    <div class="portfolio-img">
-                        <img src="https://images.unsplash.com/photo-1639762681057-408e52192e55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="Realidad Virtual Educativa">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-info">
-                                <h3>Realidad Virtual Educativa</h3>
-                                <p>Experiencias inmersivas para el aprendizaje</p>
-                                <a href="#" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<section class="portfolio section" id="portfolio" aria-labelledby="portfolio-title">
+    <div class="container">
+        <header class="section-header">
+            <h2 id="portfolio-title" class="section-title">Portafolio</h2>
+            <p class="section-subtitle"> Nuestras soluciones en acción: innovación y creatividad</p>
+            <div class="section-divider"></div>
+        </header>
+
+       
+        <div class="portfolio-filter" role="tablist">
+            <button class="filter-btn active" role="tab" data-filter="all">Todos</button>
+            <button class="filter-btn" role="tab" data-filter="education">Educación</button>
+            <button class="filter-btn" role="tab" data-filter="vr">Realidad Virtual</button>
         </div>
-    </section>
+
+        <div class="portfolio-grid">
+            <!-- Proyecto 1 -->
+            <article class="portfolio-item" data-category="education">
+                <figure class="portfolio-img">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1470&q=80" 
+                         alt="Vista previa del Laboratorio Virtual de Física" loading="lazy">
+                    <figcaption class="portfolio-overlay">
+                        <div class="portfolio-info">
+                            <h3>Laboratorio Virtual de Física</h3>
+                            <p>Aprendizajes interactivos de Física, con un enfoque práctico y visual</p>
+                            <a href="https://inquisitive-fairy-7f2c8e.netlify.app/" class="portfolio-link" aria-label="Ver proyecto Laboratorio Virtual de Física">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </figcaption>
+                </figure>
+            </article>
+
+            <!-- Proyecto 2 -->
+            <article class="portfolio-item" data-category="vr">
+                <figure class="portfolio-img">
+                    <img src="https://images.unsplash.com/photo-1639762681057-408e52192e55?auto=format&fit=crop&w=1632&q=80" 
+                         alt="Vista previa de Realidad Virtual Educativa" loading="lazy">
+                    <figcaption class="portfolio-overlay">
+                        <div class="portfolio-info">
+                            <h3>Realidad Virtual Educativa</h3>
+                            <p>Entornos virtuales que transforman la forma de aprender</p>
+                            
+                        </div>
+                    </figcaption>
+                </figure>
+            </article>
+        </div>
+    </div>
+</section>
+
 
     <!-- Services Section -->
     <section class="services section" id="services">

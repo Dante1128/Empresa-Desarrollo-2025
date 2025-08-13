@@ -92,4 +92,4 @@ document.addEventListener('DOMContentLoaded', function() {
         camera.updateProjectionMatrix();
         renderer.setSize(container.clientWidth, container.clientHeight);
     });
-});
+}); 

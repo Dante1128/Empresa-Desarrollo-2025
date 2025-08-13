@@ -147,6 +147,7 @@ if (newsletterForm) {
         this.reset();
     });
 }
+
 let currentSlide = 0;
         const totalSlides = 2;
         const track = document.getElementById('carouselTrack');
@@ -177,3 +178,34 @@ let currentSlide = 0;
 
         // Auto-advance every 3 seconds
         setInterval(nextSlide, 3000);
+
+
+// Crear partículas de fondo
+function createParticles() {
+  const container = document.getElementById('servicesParticles');
+  const particleCount = 30;
+  
+  for (let i = 0; i < particleCount; i++) {
+    const particle = document.createElement('div');
+    particle.classList.add('particle');
+    
+    // Posición y tamaño aleatorio
+    const size = Math.random() * 10 + 5;
+    const posX = Math.random() * 100;
+    const delay = Math.random() * 15;
+    const duration = Math.random() * 10 + 15;
+    
+    particle.style.width = `${size}px`;
+    particle.style.height = `${size}px`;
+    particle.style.left = `${posX}%`;
+    particle.style.bottom = `-${size}px`;
+    particle.style.animationDelay = `${delay}s`;
+    particle.style.animationDuration = `${duration}s`;
+    particle.style.opacity = Math.random() * 0.5 + 0.1;
+    
+    container.appendChild(particle);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', createParticles);
+

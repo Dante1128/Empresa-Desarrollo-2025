@@ -68,141 +68,228 @@
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About Section - NOSOTROS -->
     <section class="about section" id="about">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Nosotros</h2>
-                <p class="section-subtitle">Empresa Líder en Software Educativo</p>
+                <h2 class="section-title">NOSOTROS</h2>
                 <div class="section-divider"></div>
             </div>
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Equipo ORVEX">
+            
+            <div class="about-content-wrapper">
+                <div class="about-main-content">
+                    <div class="about-intro">
+                        <div class="about-intro-content">
+                            <h3 class="subsection-title">¿QUIÉNES SOMOS?</h3>
+                            <p>En <span class="highlight">ORVEX SOLUTIONS</span> somos un equipo apasionado por la tecnología y la innovación. Combinamos el desarrollo de software, el modelado 3D y la realidad virtual para crear soluciones digitales únicas que transforman ideas en experiencias impactantes.</p>
+                            <div class="innovation-grid">
+                                <div class="innovation-item">
+                                    <i class="fas fa-code"></i>
+                                    <span>Desarrollo de Software</span>
+                                </div>
+                                <div class="innovation-item">
+                                    <i class="fas fa-cube"></i>
+                                    <span>Modelado 3D</span>
+                                </div>
+                                <div class="innovation-item">
+                                    <i class="fas fa-vr-cardboard"></i>
+                                    <span>Realidad Virtual</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about-3d-container" id="model3d-container">
+                            <!-- Modelo 3D se cargará aquí -->
+                            <canvas id="3d-canvas"></canvas>
+                            <div class="model-loading">
+                                <div class="loading-spinner"></div>
+                                <p>Cargando tecnología 3D...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mission-vision">
+                        <div class="mission-card">
+                            <div class="mv-icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <h3>MISIÓN</h3>
+                            <p>Desarrollar soluciones tecnológicas innovadoras en software, modelado 3D y realidad virtual que optimicen procesos, potencien la creatividad y generen experiencias inmersivas de alto valor para nuestros clientes.</p>
+                            <div class="mv-decoration"></div>
+                        </div>
+                        
+                        <div class="vision-card">
+                            <div class="mv-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <h3>VISIÓN</h3>
+                            <p>Ser una empresa líder en el sector tecnológico, reconocida a nivel nacional e internacional por la calidad, innovación y valor de nuestras soluciones en software, entornos 3D y experiencias de realidad virtual.</p>
+                            <div class="mv-decoration"></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="about-text">
-                    <h3>ORVEX SOLUTIONS</h3>
-                    <p>Somos pioneros en el desarrollo de software educativo interactivo que transforma la manera de aprender y enseñar. Nuestra tecnología 3D permite a los estudiantes experimentar conceptos complejos de manera intuitiva y visual.</p>
-                    <p>Desde 2018, hemos trabajado con las principales instituciones educativas del país, desarrollando soluciones personalizadas que mejoran significativamente los resultados de aprendizaje.</p>
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <span class="stat-number" data-count="120">0</span>+
-                            <span class="stat-text">Instituciones</span>
+
+                <div class="values-section">
+                    <h3 class="subsection-title">NUESTROS VALORES</h3>
+                    <div class="values-grid">
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <h4>Innovación</h4>
+                            <p>Buscamos constantemente nuevas formas de resolver problemas y crear experiencias únicas.</p>
                         </div>
-                        <div class="stat-item">
-                            <span class="stat-number" data-count="500">0</span>+
-                            <span class="stat-text">Simulaciones</span>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-hands-helping"></i>
+                            </div>
+                            <h4>Colaboración</h4>
+                            <p>Trabajamos en equipo y con nuestros clientes para lograr los mejores resultados.</p>
                         </div>
-                        <div class="stat-item">
-                            <span class="stat-number" data-count="25">0</span>+
-                            <span class="stat-text">Expertos</span>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-medal"></i>
+                            </div>
+                            <h4>Excelencia</h4>
+                            <p>Nos comprometemos con la más alta calidad en cada proyecto que emprendemos.</p>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h4>Pasión</h4>
+                            <p>Amamos lo que hacemos y eso se refleja en nuestro trabajo diario.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Three.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="3d-model.js"></script>
+    <script src="main.js"></script>
 
     <!-- Portfolio Section -->
-    <section class="portfolio section" id="portfolio">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Portafolio</h2>
-                <p class="section-subtitle">Nuestras soluciones en acción</p>
-                <div class="section-divider"></div>
-            </div>
-            <div class="portfolio-grid">
-                <div class="portfolio-item" data-category="education">
-                    <div class="portfolio-img">
-                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Simulación de Física">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-info">
-                                <h3>Laboratorio Virtual de Física</h3>
-                                <p>Simulaciones interactivas de mecánica clásica</p>
-                                <a href="#" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item" data-category="education">
-                    <div class="portfolio-img">
-                        <img src="https://images.unsplash.com/photo-1635070040857-9fadf23b0a90?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Simulación de Química">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-info">
-                                <h3>Química Molecular 3D</h3>
-                                <p>Visualización interactiva de estructuras moleculares</p>
-                                <a href="#" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item" data-category="education">
-                    <div class="portfolio-img">
-                        <img src="https://images.unsplash.com/photo-1639762681057-408e52192e55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="Realidad Virtual Educativa">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-info">
-                                <h3>Realidad Virtual Educativa</h3>
-                                <p>Experiencias inmersivas para el aprendizaje</p>
-                                <a href="#" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<section class="portfolio section" id="portfolio" aria-labelledby="portfolio-title">
+    <div class="container">
+        <header class="section-header">
+            <h2 id="portfolio-title" class="section-title">Portafolio</h2>
+            <p class="section-subtitle"> Nuestras soluciones en acción: innovación y creatividad</p>
+            <div class="section-divider"></div>
+        </header>
+
+       
+        <div class="portfolio-filter" role="tablist">
+            <button class="filter-btn active" role="tab" data-filter="all">Todos</button>
+            <button class="filter-btn" role="tab" data-filter="education">Educación</button>
+            <button class="filter-btn" role="tab" data-filter="vr">Realidad Virtual</button>
         </div>
-    </section>
+
+        <div class="portfolio-grid">
+            <!-- Proyecto 1 -->
+            <article class="portfolio-item" data-category="education">
+                <figure class="portfolio-img">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1470&q=80" 
+                         alt="Vista previa del Laboratorio Virtual de Física" loading="lazy">
+                    <figcaption class="portfolio-overlay">
+                        <div class="portfolio-info">
+                            <h3>Laboratorio Virtual de Física</h3>
+                            <p>Aprendizajes interactivos de Física, con un enfoque práctico y visual</p>
+                            <a href="https://inquisitive-fairy-7f2c8e.netlify.app/" class="portfolio-link" aria-label="Ver proyecto Laboratorio Virtual de Física">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </figcaption>
+                </figure>
+            </article>
+
+            <!-- Proyecto 2 -->
+            <article class="portfolio-item" data-category="vr">
+                <figure class="portfolio-img">
+                    <img src="https://images.unsplash.com/photo-1639762681057-408e52192e55?auto=format&fit=crop&w=1632&q=80" 
+                         alt="Vista previa de Realidad Virtual Educativa" loading="lazy">
+                    <figcaption class="portfolio-overlay">
+                        <div class="portfolio-info">
+                            <h3>Realidad Virtual Educativa</h3>
+                            <p>Entornos virtuales que transforman la forma de aprender</p>
+                            
+                        </div>
+                    </figcaption>
+                </figure>
+            </article>
+        </div>
+    </div>
+</section>
+
 
     <!-- Services Section -->
-    <section class="services section" id="services">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Nuestra Tecnología</h2>
-                <p class="section-subtitle">Soluciones avanzadas para la educación</p>
-                <div class="section-divider"></div>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-atom"></i>
-                    </div>
-                    <h3 class="service-title">Simulaciones 3D</h3>
-                    <p class="service-description">Representaciones interactivas de conceptos científicos complejos para una mejor comprensión.</p>
-                    <ul class="service-features">
-                        <li>Física y Química</li>
-                        <li>Biología molecular</li>
-                        <li>Astronomía</li>
-                        <li>Ingeniería</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-vr-cardboard"></i>
-                    </div>
-                    <h3 class="service-title">Realidad Virtual</h3>
-                    <p class="service-description">Experiencias inmersivas que transportan a los estudiantes a entornos de aprendizaje únicos.</p>
-                    <ul class="service-features">
-                        <li>Excursiones virtuales</li>
-                        <li>Entrenamiento práctico</li>
-                        <li>Simulaciones históricas</li>
-                        <li>Visualización espacial</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-chalkboard-teacher"></i>
-                    </div>
-                    <h3 class="service-title">Plataformas Educativas</h3>
-                    <p class="service-description">Sistemas integrales para la gestión del aprendizaje con integración de simulaciones.</p>
-                    <ul class="service-features">
-                        <li>LMS personalizados</li>
-                        <li>Analíticas de aprendizaje</li>
-                        <li>Contenido interactivo</li>
-                        <li>Gamificación</li>
-                    </ul>
-                </div>
-            </div>
+<section class="services-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Nuestra <span>Tecnologia</span></h2>
+      <p class="section-subtitle">Soluciones avanzadas para la educación</p>
+    </div>
+    
+    <div class="service-cards-container">
+      <!-- Servicio 1 -->
+      <div class="service-card-pro">
+        <div class="service-image-wrapper">
+          <img src="https://ideatsg.com/wp-content/uploads/2022/12/modelado-3d-ingenieria.jpg" 
+               alt="Desarrollo Web" class="service-image">
+          <span class="service-badge">Popular</span>
         </div>
-    </section>
+        <div class="service-content">
+          <div class="service-icon-pro">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3 class="service-title-pro">Modelado 3D</h3>
+          <p class="service-desc-pro">
+            Representaciones interactivas de conceptos científicos complejos que facilitan su comprensión mediante simulaciones, animaciones y recursos visuales dinámicos.
+          </p>
+        </div>
+      </div>
+      
+      <!-- Servicio 2 -->
+      <div class="service-card-pro">
+        <div class="service-image-wrapper">
+          <img src="https://deusens.com/uploads/blog/2018/03/realidad-extendida-header.webp" 
+               alt="Diseño UI/UX" class="service-image">
+          <span class="service-badge">Nuevo</span>
+        </div>
+        <div class="service-content">
+          <div class="service-icon-pro">
+            <i class="fas fa-paint-brush"></i>
+          </div>
+          <h3 class="service-title-pro">Realidad Virtual</h3>
+          <p class="service-desc-pro">
+            Experiencias inmersivas que llevan a los estudiantes a entornos únicos donde pueden interactuar y aprender de forma práctica y envolvente.
+          </p>
+        </div>
+      </div>
+      
+      <!-- Servicio 3 -->
+      <div class="service-card-pro">
+        <div class="service-image-wrapper">
+          <img src="https://images.airdroid.com/2024/09/plataformaseducativas.jpg" 
+               alt="Marketing Digital" class="service-image">
+        </div>
+        <div class="service-content">
+          <div class="service-icon-pro">
+            <i class="fas fa-bullseye"></i>
+          </div>
+          <h3 class="service-title-pro">Plataformas Educativas</h3>
+          <p class="service-desc-pro">
+            Sistemas integrales de gestión del aprendizaje que incluyen simulaciones interactivas para enriquecer la formación práctica y el seguimiento del progreso.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Efecto partículas -->
+  <div class="services-particles" id="servicesParticles"></div>
+</section>
 
     <!-- Contact Section -->
     <section class="contact section" id="contact">

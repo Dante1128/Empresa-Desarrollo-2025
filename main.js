@@ -209,26 +209,17 @@ function createParticles() {
 
 document.addEventListener('DOMContentLoaded', createParticles);
 
- const container = document.querySelector('.hero-3d');
 
     // Escena
     const scene = new THREE.Scene();
     scene.background = new THREE.Color(0x000000);
 
-    // Cámara
-    const camera = new THREE.PerspectiveCamera(50, container.clientWidth / container.clientHeight, 0.1, 1000);
-    camera.position.z = 5;
+   
 
     // Renderizador
     const renderer = new THREE.WebGLRenderer({ antialias: true });
-    renderer.setSize(container.clientWidth, container.clientHeight);
-    container.appendChild(renderer.domElement);
 
-    // Control de mouse
-    const controls = new THREE.OrbitControls(camera, renderer.domElement);
-    controls.enableDamping = true;
-    controls.enablePan = false;
-    controls.enableZoom = false;
+
 
     // Modelo simple (puedes reemplazarlo con un GLTF o OBJ)
     const geometry = new THREE.TorusKnotGeometry(1, 0.3, 100, 16);
@@ -246,10 +237,10 @@ document.addEventListener('DOMContentLoaded', createParticles);
     // Animación
     function animate() {
         requestAnimationFrame(animate);
-        controls.update();
+     
         mesh.rotation.x += 0.005;
         mesh.rotation.y += 0.005;
-        renderer.render(scene, camera);
+      
     }
     animate();
 
@@ -259,3 +250,54 @@ document.addEventListener('DOMContentLoaded', createParticles);
         camera.updateProjectionMatrix();
         renderer.setSize(container.clientWidth, container.clientHeight);
     });
+// Theme Switcher - Actualizado
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('theme-toggle');
+    
+    // Verificar tema guardado
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+    document.body.setAttribute('data-theme', currentTheme);
+    themeToggle.checked = currentTheme === 'light';
+    
+    // Manejar cambio de tema
+    themeToggle.addEventListener('change', function() {
+        if (this.checked) {
+            document.body.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+        } else {
+            document.body.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+        }
+    });
+});
+
+
+
+// ScrollSpy para navbar
+document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll("section"); 
+    const navLinks = document.querySelectorAll(".nav-link"); // links del menú
+
+    const options = {
+        root: null,
+        threshold: 0.3, // % visible de la sección antes de marcar
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // quitar clase activa a todos
+                navLinks.forEach(link => link.classList.remove("active"));
+
+                // buscar link que apunte a la sección actual
+                const id = entry.target.getAttribute("id");
+                const activeLink = document.querySelector(`.nav-link[href="#${id}"]`);
+                if (activeLink) {
+                    activeLink.classList.add("active");
+                }
+            }
+        });
+    }, options);
+
+    sections.forEach(section => observer.observe(section));
+});

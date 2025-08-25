@@ -862,124 +862,32 @@ img {
     to { transform: rotate(360deg); }
 }
 
-/* Portfolio Section */
-.portfolio-filter {
-    display: flex;
-    justify-content: center;
-    margin-top: -30px;
-    margin-bottom: 20px; 
-    flex-wrap: wrap;
-    gap: 10px;
-}
 
-.filter-btn {
-    padding: 8px 20px;
-    background: transparent;
-    border: 1px solid var(--light-blue);
-    border-radius: 30px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    color: var(--text-light);
+/* Portfolio / Productos */
+.portfolio-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:25px}
+.portfolio-item{
+  position:relative;border-radius:12px;overflow:hidden;box-shadow:0 10px 24px rgba(3, 104, 163, 0.486);
+  background:var(--card-bg);transform:translateY(0);transition:transform .3s ease,box-shadow .3s ease;border:1px solid var(--pale-blue)
 }
+.portfolio-item:hover{transform:translateY(-6px);box-shadow:0 14px 32px rgba(13,33,89,.12)}
+.portfolio-img{position:relative;overflow:hidden}
+.portfolio-img img{width:100%;height:250px;object-fit:cover;transition:transform .5s ease}
+.portfolio-item:hover .portfolio-img img{transform:scale(1.06)}
+.portfolio-overlay{
+  position:absolute;inset:0;background:rgba(96,139,193,.90);display:flex;justify-content:center;align-items:center;
+  opacity:0;transition:opacity .35s ease
+}
+.portfolio-item:hover .portfolio-overlay{opacity:1}
+.portfolio-info{text-align:center;padding:18px;color:#061535;transform:translateY(12px);transition:transform .3s ease}
+.portfolio-item:hover .portfolio-info{transform:translateY(0)}
+.portfolio-info h3{font-size:1.2rem;margin-bottom:8px;color:#061535}
+.portfolio-info p{margin-bottom:12px;font-size:.95rem;color:#082043}
+.portfolio-link{
+  display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;background:#fff;color:var(--dark-blue);
+  border-radius:50%;transition:all .3s ease;border:1px solid rgba(13,33,89,.12)
+}
+.portfolio-link:hover{background:var(--dark-blue);color:#fff;transform:rotate(90deg) scale(1.08)}
 
-.filter-btn.active,
-.filter-btn:hover {
-    background: var(--light-blue);
-    color: var(--dark-bg);
-    border-color: var(--light-blue);
-}
-
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 30px;
-}
-
-.portfolio-item {
-    position: relative;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    background: var(--card-bg);
-    transform: translateY(0);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.portfolio-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-}
-
-.portfolio-img {
-    position: relative;
-    overflow: hidden;
-}
-
-.portfolio-img img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.portfolio-item:hover .portfolio-img img {
-    transform: scale(1.08);
-}
-
-.portfolio-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(16, 174, 216, 0.88);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.35s ease;
-}
-
-.portfolio-item:hover .portfolio-overlay {
-    opacity: 1;
-}
-
-.portfolio-info {
-    text-align: center;
-    padding: 20px;
-    color: var(--dark-bg);
-    transform: translateY(15px);
-    transition: transform 0.3s ease;
-}
-
-.portfolio-item:hover .portfolio-info {
-    transform: translateY(0);
-}
-
-.portfolio-info h3 {
-    font-size: 1.4rem;
-    margin-bottom: 10px;
-}
-
-.portfolio-info p {
-    margin-bottom: 15px;
-    font-size: 0.95rem;
-}
-
-.portfolio-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 42px;
-    height: 42px;
-    background: var(--dark-bg);
-    color: var(--white);
-    border-radius: 50%;
-    transition: all 0.3s ease;
-}
-
-.portfolio-link:hover {
-    background: var(--accent-blue);
-    transform: rotate(90deg) scale(1.1);
-}
 
 
 /* Services Section */

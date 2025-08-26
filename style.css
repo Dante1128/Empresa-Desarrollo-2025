@@ -1553,5 +1553,122 @@ img {
 
 
 
+/* equipo de desarrollo  */ 
 
 
+
+.team-section {
+    margin-bottom: 80px;
+}
+
+.team-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.team-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.team-member {
+    background: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(16, 174, 216, 0.1);
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(16, 174, 216, 0.2);
+    border-color: rgba(16, 174, 216, 0.3);
+}
+
+.member-image {
+    height: 250px;
+    overflow: hidden;
+}
+
+.member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.team-member:hover .member-image img {
+    transform: scale(1.1);
+}
+
+.member-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.member-info h4 {
+    font-size: 1.2rem;
+    color: var(--white);
+    margin-bottom: 5px;
+}
+
+.member-role {
+    color: var(--light-blue);
+    font-weight: 500;
+}
+
+
+
+/*valores*/
+.values-section {
+    margin-bottom: 80px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.value-item {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(16, 174, 216, 0.1);
+}
+
+.value-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(16, 174, 216, 0.2);
+    border-color: rgba(16, 174, 216, 0.3);
+}
+
+.value-icon {
+    width: 70px;
+    height: 70px;
+    background: rgba(16, 174, 216, 0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: var(--light-blue);
+    font-size: 1.8rem;
+}
+
+.value-item h4 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--white);
+}
+
+.value-item p {
+    color: var(--text-light);
+    line-height: 1.6;
+}

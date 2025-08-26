@@ -6,7 +6,8 @@
     <title>ORVEX SOLUTIONS | Soluciones Tecnológicas</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <!-- Preloader -->
@@ -26,7 +27,7 @@
     <header class="header">
         <div class="container">
             <div class="logo">
-                <a href="#home">
+                <a href="index.html">
                     <img src="imagenes/logodes.png" alt="" class="logoimg">
                     <span>ORVEX</span>SOLUTIONS
                 </a>
@@ -40,11 +41,11 @@
                 </div>
             <nav class="navbar">
                 <ul>
-                    <li><a href="#home" class="nav-link active">Inicio</a></li>
-                    <li><a href="#about" class="nav-link">Nosotros</a></li>
-                    <li><a href="#portfolio" class="nav-link">Productos</a></li>
-                    <li><a href="#services" class="nav-link">Servicios</a></li>
-                    <li><a href="#contact" class="nav-link">Contacto</a></li>
+                    <li><a href="index.html" class="nav-link active">Inicio</a></li>
+                    <li><a href="nosotros.html" class="nav-link">Nosotros</a></li>
+                    <li><a href="productos.html" class="nav-link">Productos</a></li>
+                    <li><a href="servicios.html" class="nav-link">Servicios</a></li>
+                    <li><a href="contacto.html" class="nav-link">Contacto</a></li>
                 </ul>
                
             </nav>
@@ -61,7 +62,7 @@
                 <h1 class="hero-title">Transformamos Ideas en <span>Realidad Digital</span></h1>
                 <p class="hero-subtitle">Estudio de desarrollo especializado en tecnologias inmersivas. Nuestro proyecto piloto lleva laboratorios de física virtuales a instituciones educativas del país.</p>
                 <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Contáctanos</a>
+                    <a href="contacto.html" class="btn btn-primary">Contáctanos</a>
                 </div>
             </div>
             <div class="hero-image">
@@ -75,312 +76,95 @@
         </div>
     </section>
 
-    <!-- About Section - NOSOTROS -->
-    <section class="about section" id="about">
+    <!-- About Preview Section -->
+    <section class="about-preview section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">NOSOTROS</h2>
+                <h2 class="section-title">Conoce más sobre nosotros</h2>
                 <div class="section-divider"></div>
             </div>
-            
-            <div class="about-content-wrapper">
-                <div class="about-main-content">
-                    <div class="about-intro">
-                        <div class="about-intro-content">
-                            <h3 class="subsection-title">¿QUIÉNES SOMOS?</h3>
-                            <p>En <span class="highlight">ORVEX SOLUTIONS</span> somos un equipo apasionado por la tecnología y la innovación. Combinamos el desarrollo de software, el modelado 3D y la realidad virtual para crear soluciones digitales únicas que transforman ideas en experiencias impactantes.</p>
-                            <div class="innovation-grid">
-                                <div class="innovation-item">
-                                    <i class="fas fa-code"></i>
-                                    <span>Desarrollo de Software</span>
-                                </div>
-                                <div class="innovation-item">
-                                    <i class="fas fa-cube"></i>
-                                    <span>Modelado 3D</span>
-                                </div>
-                                <div class="innovation-item">
-                                    <i class="fas fa-vr-cardboard"></i>
-                                    <span>Realidad Virtual</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="about-3d-container" id="model3d-container">
-                            <!-- Modelo 3D se cargará aquí -->
-                            <canvas id="3d-canvas"></canvas>
-                            <div class="model-loading">
-                                <div class="loading-spinner"></div>
-                                <p>Cargando tecnología 3D...</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mission-vision">
-                        <div class="mission-card">
-                            <div class="mv-icon">
-                                <i class="fas fa-bullseye"></i>
-                            </div>
-                            <h3>MISIÓN</h3>
-                            <p>Desarrollar soluciones tecnológicas innovadoras en software, modelado 3D y realidad virtual que optimicen procesos, potencien la creatividad y generen experiencias inmersivas de alto valor para nuestros clientes.</p>
-                            <div class="mv-decoration"></div>
-                        </div>
-                        
-                        <div class="vision-card">
-                            <div class="mv-icon">
-                                <i class="fas fa-eye"></i>
-                            </div>
-                            <h3>VISIÓN</h3>
-                            <p>Ser una empresa líder en el sector tecnológico, reconocida a nivel nacional e internacional por la calidad, innovación y valor de nuestras soluciones en software, entornos 3D y experiencias de realidad virtual.</p>
-                            <div class="mv-decoration"></div>
-                        </div>
-                    </div>
+            <div class="about-preview-content">
+                <div class="about-preview-text">
+                    <h3>Innovación en educación tecnológica</h3>
+                    <p>En ORVEX SOLUTIONS combinamos desarrollo de software, modelado 3D y realidad virtual para crear soluciones educativas transformadoras.</p>
+                    <a href="nosotros.html" class="btn btn-secondary">Descubre más</a>
                 </div>
-
-                <div class="values-section">
-                    <h3 class="subsection-title">NUESTROS VALORES</h3>
-                    <div class="values-grid">
-                        <div class="value-item">
-                            <div class="value-icon">
-                                <i class="fas fa-lightbulb"></i>
-                            </div>
-                            <h4>Innovación</h4>
-                            <p>Buscamos constantemente nuevas formas de resolver problemas y crear experiencias únicas.</p>
-                        </div>
-                        <div class="value-item">
-                            <div class="value-icon">
-                                <i class="fas fa-hands-helping"></i>
-                            </div>
-                            <h4>Colaboración</h4>
-                            <p>Trabajamos en equipo y con nuestros clientes para lograr los mejores resultados.</p>
-                        </div>
-                        <div class="value-item">
-                            <div class="value-icon">
-                                <i class="fas fa-medal"></i>
-                            </div>
-                            <h4>Excelencia</h4>
-                            <p>Nos comprometemos con la más alta calidad en cada proyecto que emprendemos.</p>
-                        </div>
-                        <div class="value-item">
-                            <div class="value-icon">
-                                <i class="fas fa-heart"></i>
-                            </div>
-                            <h4>Pasión</h4>
-                            <p>Amamos lo que hacemos y eso se refleja en nuestro trabajo diario.</p>
-                        </div>
-                    </div>
+                <div class="about-preview-image">
+                    <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?q=80&w=1786&auto=format&fit=crop" alt="Innovación tecnológica">
                 </div>
             </div>
         </div>
     </section>
 
-
-    <!-- Portfolio Section -->
-<section class="portfolio section" id="portfolio" aria-labelledby="portfolio-title">
-    <div class="container">
-        <header class="section-header">
-            <h2 id="portfolio-title" class="section-title">Productos</h2>
-            <p class="section-subtitle"> Nuestras soluciones en acción: innovación y creatividad</p>
-            <div class="section-divider"></div>
-        </header>
-
-       
-       
-        <div class="portfolio-grid">
-            <!-- Proyecto 1 -->
-           <article class="portfolio-item" data-category="education">
-    <figure class="portfolio-img">
-        <iframe 
-            src="https://inquisitive-fairy-7f2c8e.netlify.app/" 
-            loading="lazy" 
-            style="width:100%; height:300px; border:none; border-radius:8px;">
-        </iframe>
-        <figcaption class="portfolio-overlay">
-            <div class="portfolio-info">
-                <h3>Visualizador de Componentes de Física</h3>
-                <p>Aprendizajes interactivos de Física, con un enfoque práctico y visual</p>
-                <a href="https://inquisitive-fairy-7f2c8e.netlify.app/" class="portfolio-link" aria-label="Ver proyecto Laboratorio Virtual de Física" target="_blank" rel="noopener noreferrer">
-                    <i class="fas fa-external-link-alt"></i>
-                </a>
-            </div>
-        </figcaption>
-    </figure>
-</article>
-
-
-<article class="portfolio-item" data-category="vr">
-    <a href="index2.html" target="_blank">
-        <figure class="portfolio-img">
-            <img src="logo2.png" 
-                 alt="Vista previa de Realidad Virtual Educativa" loading="lazy">
-            <figcaption class="portfolio-overlay">
-                <div class="portfolio-info">
-                    <h3>Simulador de Laboratorio de Física</h3>
-                    <p>Entornos virtuales que transforman la forma de aprender física</p>
-                </div>
-            </figcaption>
-        </figure>
-    </a>
-</article>
-
-            
-        </div>
-    </div>
-</section>
-
-
-    <!-- Services Section -->
-<section class="services-section" id="services">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Nuestro <span>Servicio</span></h2>
-      <p class="section-subtitle">Soluciones avanzadas para la educación</p>
-    </div>
-    
-    <div class="service-cards-container">
-      <!-- Servicio 1 -->
-      <div class="service-card-pro">
-        <div class="service-image-wrapper">
-          <img src="https://ideatsg.com/wp-content/uploads/2022/12/modelado-3d-ingenieria.jpg" 
-               alt="Desarrollo Web" class="service-image">
-          <span class="service-badge">Popular</span>
-        </div>
-        <div class="service-content">
-          <div class="service-icon-pro">
-            <i class="fas fa-code"></i>
-          </div>
-          <h3 class="service-title-pro">Modelado 3D</h3>
-          <p class="service-desc-pro">
-            Representaciones interactivas de conceptos científicos complejos que facilitan su comprensión mediante simulaciones, animaciones y recursos visuales dinámicos.
-          </p>
-        </div>
-      </div>
-      
-      <!-- Servicio 2 -->
-      <div class="service-card-pro">
-        <div class="service-image-wrapper">
-          <img src="https://deusens.com/uploads/blog/2018/03/realidad-extendida-header.webp" 
-               alt="Diseño UI/UX" class="service-image">
-          <span class="service-badge">Nuevo</span>
-        </div>
-        <div class="service-content">
-          <div class="service-icon-pro">
-            <i class="fas fa-paint-brush"></i>
-          </div>
-          <h3 class="service-title-pro">Realidad Virtual</h3>
-          <p class="service-desc-pro">
-            Experiencias inmersivas que llevan a los estudiantes a entornos únicos donde pueden interactuar y aprender de forma práctica y envolvente.
-          </p>
-        </div>
-      </div>
-
-      
-      
-      <!-- Servicio 3 -->
-      <div class="service-card-pro">
-        <div class="service-image-wrapper">
-          <img src="https://images.airdroid.com/2024/09/plataformaseducativas.jpg" 
-               alt="Marketing Digital" class="service-image">
-        </div>
-        <div class="service-content">
-          <div class="service-icon-pro">
-            <i class="fas fa-bullseye"></i>
-          </div>
-          <h3 class="service-title-pro">Plataformas Educativas</h3>
-          <p class="service-desc-pro">
-            Sistemas integrales de gestión del aprendizaje que incluyen simulaciones interactivas para enriquecer la formación práctica y el seguimiento del progreso.
-          </p>
-        </div>
-      </div>
-      
-      
-    </div>
-    
-    
-  </div>
-  
-  <!-- Efecto partículas -->
-  <div class="services-particles" id="servicesParticles"></div>
-</section>
-
-    <!-- Contact Section -->
-    <section class="contact section" id="contact">
+    <!-- Products Preview Section -->
+    <section class="products-preview section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Contacto</h2>
-                <p class="section-subtitle">Transformemos juntos la educación</p>
+                <h2 class="section-title">Nuestros Productos</h2>
                 <div class="section-divider"></div>
             </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                            <div class="map-container">
-                                    <h3 class="map-title">Dirección</h3>
-                                    <p class="map-address">Sopocachi, Rosendo Gutiérrez Nro 4567</p>
-                                    <iframe 
-                                        class="map-frame"
-                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3819.4434061450464!2d-68.129861!3d-16.511389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f205a5d3e2e19%3A0x0!2zMTbCsDMwJzQxLjAiUyA2OMKwMDcnNDcuNSJX!5e0!3m2!1ses!2sbo!4v1723542000000!5m2!1ses!2sbo" 
-                                        width="100%" 
-                                        height="180" 
-                                        allowfullscreen 
-                                        loading="lazy" 
-                                        referrerpolicy="no-referrer-when-downgrade">
-                                    </iframe>
-                                </div>
-
-
-
-
+            <div class="products-preview-grid">
+                <div class="product-preview-item">
+                    <div class="product-preview-icon">
+                        <i class="fas fa-vr-cardboard"></i>
                     </div>
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fas fa-phone-alt"></i>
-                        </div>
-                        <div class="info-text">
-                            <h3>Teléfono</h3>
-                            <p>+591 7765489</p>
-                            <p>+591 7754325</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="info-text">
-                            <h3>Email</h3>
-                            <p>info@orvexsolutions.com</p>
-                            <p>ventas@orvexsolutions.com</p>
-                        </div>
-                    </div>
-                    
+                    <h3>Laboratorios Virtuales</h3>
+                    <p>Experiencias inmersivas para el aprendizaje de física.</p>
                 </div>
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Nombre completo" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" id="phone" name="phone" placeholder="Teléfono (opcional)">
-                        </div>
-                        <div class="form-group">
-                            <select id="subject" name="subject" required>
-                                <option value="" disabled selected>Selecciona un asunto</option>
-                                <option value="consult">Consulta</option>
-                                <option value="demo">Solicitud de Demo</option>
-                                <option value="quote">Cotización</option>
-                                <option value="other">Otro</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" rows="5" placeholder="Tu mensaje" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Enviar </button>
-                    </form>
+                <div class="product-preview-item">
+                    <div class="product-preview-icon">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <h3>Modelados 3D</h3>
+                    <p>Representaciones interactivas de conceptos científicos.</p>
                 </div>
+                <div class="product-preview-item">
+                    <div class="product-preview-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Plataformas Educativas</h3>
+                    <p>Sistemas integrales de gestión del aprendizaje.</p>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="productos.html" class="btn btn-primary">Ver todos los productos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview Section -->
+    <section class="services-preview section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestros Servicios</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="services-preview-content">
+                <div class="services-preview-image">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1770&auto=format&fit=crop" alt="Servicios tecnológicos">
+                </div>
+                <div class="services-preview-text">
+                    <h3>Soluciones a medida</h3>
+                    <p>Ofrecemos servicios especializados en desarrollo de software, realidad virtual y modelado 3D para instituciones educativas.</p>
+                    <ul class="services-preview-list">
+                        <li><i class="fas fa-check"></i> Desarrollo de software educativo</li>
+                        <li><i class="fas fa-check"></i> Creación de experiencias VR/AR</li>
+                        <li><i class="fas fa-check"></i> Modelado 3D interactivo</li>
+                        <li><i class="fas fa-check"></i> Implementación de plataformas LMS</li>
+                    </ul>
+                    <a href="servicios.html" class="btn btn-secondary">Conoce nuestros servicios</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>¿Listo para transformar la educación con tecnología?</h2>
+                <p>Contáctanos y descubre cómo nuestras soluciones pueden beneficiar a tu institución.</p>
+                <a href="contacto.html" class="btn btn-light">Solicitar información</a>
             </div>
         </div>
     </section>
@@ -391,7 +175,7 @@
             <div class="footer-content">
                 <div class="footer-about">
                     <div class="logo">
-                        <a href="#home">
+                        <a href="index.html">
                             <span>ORVEX</span>SOLUTIONS
                         </a>
                     </div>
@@ -404,23 +188,16 @@
                         <a href="#"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
-                <div class="carousel-track" id="carouselTrack">
-                    <div class="carousel-slide">
-                        <div class="logo-item">
-                            <img src="imagenes/descargablend.png" alt="" class="logoo">
-                            <h3 class="logo-name">Blender</h3>
-                        </div>
-                    </div>
-                    
-                    <!-- Slide 2 -->
-                    <div class="carousel-slide">
-                        <div class="logo-item">
-                            <img src="imagenes/frame.jpg" alt="" class="logoo">
-                            <h3 class="logo-name">A-frame</h3>
-                        </div>
-                    </div>
+                <div class="footer-links">
+                    <h3>Enlaces rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
                 </div>
-              
                 <div class="footer-newsletter">
                     <h3>Boletín</h3>
                     <p>Suscríbete para recibir nuestras últimas noticias y ofertas.</p>
@@ -450,10 +227,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
-    
-    <!-- Three.js CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="3d-model.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

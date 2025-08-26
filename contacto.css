@@ -1,0 +1,247 @@
+/* Page Header */
+.page-header {
+    padding: 160px 0 80px;
+    background: linear-gradient(135deg, var(--dark-blue) 0%, var(--dark-bg) 100%);
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--white);
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Contact Section */
+.contact-content {
+    display: flex;
+    gap: 50px;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.info-item {
+    display: flex;
+    margin-bottom: 30px;
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.info-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(16, 174, 216, 0.1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: var(--light-blue);
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.info-text h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--white);
+}
+
+.info-text p {
+    color: var(--text-muted);
+    margin-bottom: 5px;
+}
+
+.contact-form {
+    flex: 1;
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-light);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--light-blue);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(16, 174, 216, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* FAQ Section */
+.faq {
+    background: linear-gradient(135deg, var(--dark-blue) 0%, var(--dark-bg) 100%);
+}
+
+.faq-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: var(--card-bg);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+    background: rgba(16, 174, 216, 0.05);
+}
+
+.faq-question h3 {
+    font-size: 1.2rem;
+    color: var(--white);
+    margin: 0;
+}
+
+.faq-toggle {
+    font-size: 1.2rem;
+    color: var(--light-blue);
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-toggle {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    padding: 0 20px 20px;
+    max-height: 500px;
+}
+
+.faq-answer p {
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Map Container */
+.map-container {
+    margin-top: 10px;
+}
+
+.map-title {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: var(--white);
+}
+
+.map-address {
+    color: var(--text-muted);
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .contact-content {
+        flex-direction: column;
+    }
+    
+    .faq-content {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .info-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .info-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .contact-form {
+        padding: 30px 20px;
+    }
+    
+    .page-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .page-header p {
+        font-size: 1.1rem;
+    }
+    
+    .faq-question h3 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .info-item {
+        padding: 15px;
+    }
+    
+    .faq-question {
+        padding: 15px;
+    }
+    
+    .faq-question h3 {
+        font-size: 1rem;
+    }
+    
+    .faq-answer {
+        padding: 0 15px;
+    }
+    
+    .faq-item.active .faq-answer {
+        padding: 0 15px 15px;
+    }
+}

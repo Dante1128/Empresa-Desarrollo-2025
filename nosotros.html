@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros | ORVEX SOLUTIONS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="nosotros.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="imagenes/logodes.png" alt="" class="logoimg">
+                    <span>ORVEX</span>SOLUTIONS
+                </a>
+            </div>
+             <div class="theme-switch">
+                    <input type="checkbox" id="theme-toggle">
+                    <label for="theme-toggle" class="theme-switch-label">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                    </label>
+                </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="nosotros.html" class="nav-link active">Nosotros</a></li>
+                    <li><a href="productos.html" class="nav-link">Productos</a></li>
+                    <li><a href="servicios.html" class="nav-link">Servicios</a></li>
+                    <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+                </ul>
+               
+            </nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Nosotros</h1>
+            <p>Conoce más sobre nuestra misión, visión y valores</p>
+        </div>
+    </section>
+
+    <!-- About Section - NOSOTROS -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="about-content-wrapper">
+                <div class="about-main-content">
+                    <div class="about-intro">
+                        <div class="about-intro-content">
+                            <h3 class="subsection-title">¿QUIÉNES SOMOS?</h3>
+                            <p>En <span class="highlight">ORVEX SOLUTIONS</span> somos un equipo apasionado por la tecnología y la innovación. Combinamos el desarrollo de software, el modelado 3D y la realidad virtual para crear soluciones digitales únicas que transforman ideas en experiencias impactantes.</p>
+                            <div class="innovation-grid">
+                                <div class="innovation-item">
+                                    <i class="fas fa-code"></i>
+                                    <span>Desarrollo de Software</span>
+                                </div>
+                                <div class="innovation-item">
+                                    <i class="fas fa-cube"></i>
+                                    <span>Modelado 3D</span>
+                                </div>
+                                <div class="innovation-item">
+                                    <i class="fas fa-vr-cardboard"></i>
+                                    <span>Realidad Virtual</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about-3d-container" id="model3d-container">
+                            <!-- Modelo 3D se cargará aquí -->
+                            <canvas id="3d-canvas"></canvas>
+                            <div class="model-loading">
+                                <div class="loading-spinner"></div>
+                                <p>Cargando tecnología 3D...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mission-vision">
+                        <div class="mission-card">
+                            <div class="mv-icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <h3>MISIÓN</h3>
+                            <p>Desarrollar soluciones tecnológicas innovadoras en software, modelado 3D y realidad virtual que optimicen procesos, potencien la creatividad y generen experiencias inmersivas de alto valor para nuestros clientes.</p>
+                            <div class="mv-decoration"></div>
+                        </div>
+                        
+                        <div class="vision-card">
+                            <div class="mv-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <h3>VISIÓN</h3>
+                            <p>Ser una empresa líder en el sector tecnológico, reconocida a nivel nacional e internacional por la calidad, innovación y valor de nuestras soluciones en software, entornos 3D y experiencias de realidad virtual.</p>
+                            <div class="mv-decoration"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botón para redirigir a la página de detalles -->
+                <div class="more-info-container">
+                    <a href="nosotros-detalle.html" class="more-info-btn">Más Información</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="logo">
+                        <a href="index.html">
+                            <span>ORVEX</span>SOLUTIONS
+                        </a>
+                    </div>
+                    <p>Transformando la educación con tecnología 3D avanzada y soluciones innovadoras.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/15ntqUbbmF/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/OrvexSolutions "><i class="fab fa-x"></i></a>
+                        <a href="https://www.linkedin.com/in/orvex-solutions-00138237a/"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/orvexsolutions/profilecard/?igsh=czF2b3o3bHRtNGgz "><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Enlaces rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Boletín</h3>
+                    <p>Suscríbete para recibir nuestras últimas noticias y ofertas.</p>
+                    <form id="newsletterForm">
+                        <input type="email" placeholder="Tu correo electrónico" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 ORVEX SOLUTIONS. Todos los derechos reservados.</p>
+                <div class="footer-legal">
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Términos y Condiciones</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    
+    <!-- Three.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="3d-model.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

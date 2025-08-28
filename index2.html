@@ -1,10 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PhysicsLab Pro - Simulación de Laboratorios de Física</title>
     <style>
+        :root {
+            --bg: #F3F3E0;
+            /* fondo base */
+            --primary: #133E87;
+            /* azul marino (principal) */
+            --accent: #608BC1;
+            /* azul medio (botones/destacados) */
+            --muted: #CBDCEB;
+            /* azul claro (cards/sutilezas) */
+            --text: #333;
+            /* texto principal */
+            --white: #fff;
+        }
+
+
         * {
             margin: 0;
             padding: 0;
@@ -14,9 +30,12 @@
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--text);
             min-height: 100vh;
+            background:
+                radial-gradient(1200px 600px at 80% -10%, #CBDCEB 0%, rgba(203, 220, 235, 0) 60%),
+                radial-gradient(900px 500px at -10% 20%, #F3F3E0 0%, rgba(243, 243, 224, 0) 55%),
+                linear-gradient(180deg, #F3F3E0 0%, #CBDCEB 100%);
         }
 
         .container {
@@ -27,9 +46,11 @@
 
         /* Header */
         header {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(19, 62, 135, 0.85);
+            /* var(--primary) translúcido */
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(203, 220, 235, 0.6);
+            /* var(--muted) */
             padding: 1rem 0;
             position: fixed;
             width: 100%;
@@ -67,8 +88,9 @@
         }
 
         .login-btn {
-            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
-            color: white;
+            background: linear-gradient(45deg, var(--accent), var(--primary));
+            /* antes rojo/naranja */
+            color: var(--white);
             padding: 0.5rem 1.5rem;
             border: none;
             border-radius: 25px;
@@ -86,7 +108,9 @@
             margin-top: 80px;
             padding: 4rem 0;
             text-align: center;
-            color: white;
+            color: var(--white);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            /* NUEVO */
         }
 
         .hero h1 {
@@ -103,8 +127,10 @@
         }
 
         .cta-button {
-            background: linear-gradient(45deg, #ffd700, #ff8c00);
-            color: #333;
+            background: linear-gradient(45deg, var(--muted), var(--accent));
+            /* antes dorado */
+            color: #0b2147;
+            /* buen contraste sobre azul claro */
             padding: 1rem 2rem;
             border: none;
             border-radius: 30px;
@@ -112,47 +138,196 @@
             font-weight: bold;
             cursor: pointer;
             transition: all 0.3s ease;
-            animation: fadeInUp 1s ease 0.4s both;
         }
 
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+            box-shadow: 0 10px 30px rgba(96, 139, 193, 0.35);
+            /* var(--accent) */
         }
 
         /* Features Section */
         .features {
-            background: white;
-            padding: 4rem 0;
-            margin-top: 2rem;
+            background: transparent;
+            /* ya no blanco sólido */
+            padding: 6rem 0 5rem;
+            position: relative;
+            overflow: hidden;
         }
 
+        .features::before,
+        .features::after {
+            content: "";
+            position: absolute;
+            width: 560px;
+            height: 560px;
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: .35;
+            z-index: 0;
+        }
+
+        .features::before {
+            background: radial-gradient(circle, #608BC1, #133E87);
+            top: -120px;
+            left: -160px;
+        }
+
+        .features::after {
+            background: radial-gradient(circle, #CBDCEB, #608BC1);
+            bottom: -180px;
+            right: -140px;
+        }
+
+
         .features h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #333;
+            position: relative;
+            z-index: 1;
         }
 
         .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            position: relative;
+            z-index: 1;
         }
 
-        .feature-card {
-            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
-            transition: transform 0.3s ease;
-            border: 1px solid #e0e0e0;
+        .feature-panel {
+            --br: 22px;
+            /* radio */
+            --pad: 28px;
+            --shine: rgba(255, 255, 255, .35);
+            --bgGlass: rgba(255, 255, 255, .28);
+            /* capa glass */
+            --border1: #CBDCEB;
+            /* borde externo */
+            --border2: #608BC1;
+            /* borde interno */
+            background: linear-gradient(180deg, var(--bgGlass), rgba(255, 255, 255, .15));
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: var(--pad);
+            border-radius: var(--br);
+            position: relative;
+            isolation: isolate;
+            /* para los pseudo */
+            transform-style: preserve-3d;
+            transition: transform .35s ease, box-shadow .35s ease, background .35s ease;
+            box-shadow: 0 18px 45px rgba(19, 62, 135, .12), inset 0 1px 0 var(--shine);
+            border: 1px solid rgba(203, 220, 235, .7);
         }
 
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        /* borde degradado suave */
+        .feature-panel::before {
+            content: "";
+            position: absolute;
+            inset: -1px;
+            border-radius: calc(var(--br) + 1px);
+            padding: 1px;
+            /* “grosor” del borde */
+            background: linear-gradient(135deg, var(--border1), var(--border2));
+            -webkit-mask:
+                linear-gradient(#000 0 0) content-box,
+                linear-gradient(#000 0 0);
+            mask:
+                linear-gradient(#000 0 0) content-box,
+                linear-gradient(#000 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            z-index: -1;
         }
+
+        /* brillo/spotlight que sigue al mouse */
+        .feature-panel::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background:
+                radial-gradient(240px 160px at var(--mx, 50%) var(--my, 30%), rgba(255, 255, 255, .25), transparent 60%);
+            opacity: .0;
+            transition: opacity .25s ease;
+            pointer-events: none;
+        }
+
+        .feature-panel:hover {
+            transform: translateY(-6px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+            box-shadow: 0 26px 60px rgba(19, 62, 135, .18);
+        }
+
+        .feature-panel:hover::after {
+            opacity: .9;
+        }
+
+        .feature-icon {
+            display: inline-grid;
+            place-items: center;
+            width: 68px;
+            height: 68px;
+            border-radius: 16px;
+            margin: 0 auto 16px;
+            font-size: 32px;
+            transform: translateZ(30px);
+            background: linear-gradient(135deg, #CBDCEB, #608BC1);
+            color: #0b2147;
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, .6), 0 8px 22px rgba(19, 62, 135, .18);
+        }
+
+        .features h2 {
+            font-size: 2.35rem;
+            margin-bottom: 2.2rem;
+            background: linear-gradient(90deg, #133E87, #608BC1);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+
+        .feature-panel h3 {
+            font-size: 1.45rem;
+            margin: .35rem 0 0.75rem;
+            color: #0b2147;
+        }
+
+        .feature-panel p {
+            color: #374151;
+        }
+
+        /* animación de entrada */
+        @keyframes cardUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .feature-panel {
+            animation: cardUp .6s ease both;
+        }
+
+        .features-grid>*:nth-child(2) {
+            animation-delay: .06s;
+        }
+
+        .features-grid>*:nth-child(3) {
+            animation-delay: .12s;
+        }
+
+        .features-grid>*:nth-child(4) {
+            animation-delay: .18s;
+        }
+
+        .features-grid>*:nth-child(5) {
+            animation-delay: .24s;
+        }
+
+        .features-grid>*:nth-child(6) {
+            animation-delay: .30s;
+        }
+
 
         .feature-icon {
             font-size: 3rem;
@@ -167,9 +342,10 @@
 
         /* Pricing Section */
         .pricing {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            /* antes morado */
             padding: 4rem 0;
-            color: white;
+            color: var(--white);
         }
 
         .pricing h2 {
@@ -190,12 +366,14 @@
             padding: 2rem;
             border-radius: 15px;
             text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(203, 220, 235, 0.35);
+            /* var(--muted) */
         }
 
         .pricing-card.featured {
             transform: scale(1.05);
-            border: 2px solid #ffd700;
+            border: 2px solid var(--muted);
+            /* antes dorado */
         }
 
         .price {
@@ -205,8 +383,9 @@
         }
 
         .price-button {
-            background: linear-gradient(45deg, #ffd700, #ff8c00);
-            color: #333;
+            background: linear-gradient(45deg, var(--muted), var(--accent));
+            /* antes dorado */
+            color: #0b2147;
             padding: 0.8rem 1.5rem;
             border: none;
             border-radius: 25px;
@@ -219,6 +398,7 @@
         .price-button:hover {
             transform: translateY(-2px);
         }
+
 
         /* Login Modal */
         .modal {
@@ -268,21 +448,22 @@
         .form-group input {
             width: 100%;
             padding: 0.8rem;
-            border: 2px solid #e0e0e0;
+            border: 2px solid var(--muted);
             border-radius: 8px;
             font-size: 1rem;
             transition: border-color 0.3s ease;
         }
 
         .form-group input:focus {
-            border-color: #667eea;
-            outline: none;
+            border-color: var(--accent);
         }
+
 
         .login-submit {
             width: 100%;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            color: white;
+            background: linear-gradient(45deg, var(--accent), var(--primary));
+            /* botón del modal */
+            color: var(--white);
             padding: 1rem;
             border: none;
             border-radius: 8px;
@@ -296,10 +477,23 @@
             transform: translateY(-2px);
         }
 
+
         /* Footer */
         footer {
             background: #333;
             color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        #loginModal a {
+            color: var(--accent);
+        }
+
+        footer {
+            background: var(--primary);
+            /* antes #333 */
+            color: var(--white);
             text-align: center;
             padding: 2rem 0;
         }
@@ -310,6 +504,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -321,6 +516,7 @@
                 transform: translateY(-50px);
                 opacity: 0;
             }
+
             to {
                 transform: translateY(0);
                 opacity: 1;
@@ -343,6 +539,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <header>
@@ -351,7 +548,7 @@
             <ul class="nav-links">
                 <li><a href="#features">Características</a></li>
                 <li><a href="#pricing">Precios</a></li>
-             
+
             </ul>
             <button class="login-btn" onclick="openModal()">Iniciar Sesión</button>
             <button class="login-btn" onclick="openModal()">Registrate</button>
@@ -362,7 +559,8 @@
     <section class="hero">
         <div class="container">
             <h1>Revoluciona tu Enseñanza de Física</h1>
-            <p>Plataforma avanzada de simulación para laboratorios de física. Experimenta sin límites, aprende sin riesgos.</p>
+            <p>Plataforma avanzada de simulación para laboratorios de física. Experimenta sin límites, aprende sin
+                riesgos.</p>
             <button class="cta-button" onclick="openModal()">Comenzar Prueba Gratuita</button>
         </div>
     </section>
@@ -372,32 +570,37 @@
         <div class="container">
             <h2>¿Por qué elegir PhysicsLab Pro?</h2>
             <div class="features-grid">
-                <div class="feature-card">
+                <div class="feature-panel">
                     <div class="feature-icon">🧪</div>
                     <h3>Simulaciones Realistas</h3>
-                    <p>Experimenta con física cuántica, mecánica clásica, electromagnetismo y más con simulaciones de alta precisión.</p>
+                    <p>Experimenta con física cuántica, mecánica clásica, electromagnetismo y más con simulaciones de
+                        alta precisión.</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-panel">
                     <div class="feature-icon">📊</div>
                     <h3>Análisis de Datos</h3>
-                    <p>Herramientas avanzadas para recopilar, analizar y visualizar datos experimentales en tiempo real.</p>
+                    <p>Herramientas avanzadas para recopilar, analizar y visualizar datos experimentales en tiempo real.
+                    </p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-panel">
                     <div class="feature-icon">👥</div>
                     <h3>Colaboración</h3>
-                    <p>Permite a estudiantes trabajar juntos en experimentos virtuales desde cualquier lugar del mundo.</p>
+                    <p>Permite a estudiantes trabajar juntos en experimentos virtuales desde cualquier lugar del mundo.
+                    </p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-panel">
                     <div class="feature-icon">🎯</div>
                     <h3>Evaluación Automática</h3>
-                    <p>Sistema inteligente de evaluación que proporciona retroalimentación instantánea a los estudiantes.</p>
+                    <p>Sistema inteligente de evaluación que proporciona retroalimentación instantánea a los
+                        estudiantes.</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-panel">
                     <div class="feature-icon">📱</div>
                     <h3>Multiplataforma</h3>
-                    <p>Accede desde cualquier dispositivo: computadora, tablet o smartphone con total compatibilidad.</p>
+                    <p>Accede desde cualquier dispositivo: computadora, tablet o smartphone con total compatibilidad.
+                    </p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-panel">
                     <div class="feature-icon">🔬</div>
                     <h3>Laboratorios Personalizables</h3>
                     <p>Crea tus propios experimentos y laboratorios adaptados a tu curriculum específico.</p>
@@ -406,12 +609,13 @@
         </div>
     </section>
 
+
     <!-- Pricing Section -->
     <section class="pricing" id="pricing">
         <div class="container">
             <h2>Planes Flexibles para Cada Necesidad</h2>
             <div class="pricing-grid">
-                
+
                 <div class="pricing-card">
                     <h3>Básico</h3>
                     <div class="price">$100<span style="font-size: 1rem;">/mes</span></div>
@@ -494,7 +698,7 @@
         }
 
         // Close modal when clicking outside
-        window.onclick = function(event) {
+        window.onclick = function (event) {
             const modal = document.getElementById('loginModal');
             if (event.target == modal) {
                 modal.style.display = 'none';
@@ -502,24 +706,24 @@
         }
 
         // Login form handling
-        document.getElementById('loginForm').addEventListener('submit', function(e) {
+        document.getElementById('loginForm').addEventListener('submit', function (e) {
             e.preventDefault();
-            
+
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
-            
+
             // Simulate login process
             if (email && password) {
                 // Show loading state
                 const submitBtn = document.querySelector('.login-submit');
                 submitBtn.innerHTML = 'Iniciando sesión...';
                 submitBtn.disabled = true;
-                
+
                 // Simulate API call delay
                 setTimeout(() => {
                     alert('¡Bienvenido a PhysicsLab Pro! Redirigiendo al dashboard...');
                     closeModal();
-                    
+
                     // Reset form
                     document.getElementById('loginForm').reset();
                     submitBtn.innerHTML = 'Acceder a la Plataforma';
@@ -576,4 +780,5 @@
         });
     </script>
 </body>
+
 </html>

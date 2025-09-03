@@ -1,71 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nosotros</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ORVEX SOLUTIONS | Soluciones Tecnológicas</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros - ORVEX SOLUTIONS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-theme="light">
     <!-- Preloader -->
-    <div class="preloader">
-      <div class="loader">
-        <div class="loader-square"></div>
-        <div class="loader-square"></div>
-        <div class="loader-square"></div>
-        <div class="loader-square"></div>
-        <div class="loader-square"></div>
-        <div class="loader-square"></div>
-        <div class="loader-square"></div>
-      </div>
+    <div class="preloader" id="preloader">
+        <div class="loader">
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+        </div>
     </div>
+    
     <!-- Header -->
     <header class="header">
-      <div class="container">
-        <div class="logo">
-          <a href="#home">
-            <img src="imagenes/logodes.png" alt="" class="logoimg" />
-            <span>ORVEX</span>SOLUTIONS
-          </a>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img  id="logo" src="imagenes/logodes.png" alt="ORVEX SOLUTIONS" class="logoimg">
+                    <span>ORVEX</span><span>SOLUTIONS</span>
+                </a>
+            </div>
+            <div class="theme-switch">
+                <input type="checkbox" id="theme-toggle">
+                <label for="theme-toggle" class="theme-switch-label">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                </label>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html#home" class="nav-link">Inicio</a></li>
+                    <li><a href="index.html#about" class="nav-link">Nosotros</a></li>
+                    <li><a href="index.html#portfolio" class="nav-link">Productos</a></li>
+                    <li><a href="index.html#services" class="nav-link">Servicios</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
-        <div class="theme-switch">
-          <input type="checkbox" id="theme-toggle" />
-          <label for="theme-toggle" class="theme-switch-label">
-            <i class="fas fa-sun"></i>
-            <i class="fas fa-moon"></i>
-          </label>
-        </div>
-        <nav class="navbar">
-          <ul>
-            <li>
-              <a href="index.html#home" class="nav-link active">Inicio</a>
-            </li>
-            <li><a href="index.html#about" class="nav-link">Nosotros</a></li>
-            <li>
-              <a href="index.html#portfolio" class="nav-link">Productos</a>
-            </li>
-            <li>
-              <a href="index.html#services" class="nav-link">Servicios</a>
-            </li>
-            <li><a href="index.html#contact" class="nav-link">Contacto</a></li>
-          </ul>
-        </nav>
-        <div class="menu-toggle">
-          <i class="fas fa-bars"></i>
-        </div>
-      </div>
     </header>
-
     <section class="about-preview section">
       <div class="container">
         <div class="section-header">
@@ -121,14 +108,14 @@
     </div>
 
     <div class="values-section">
-      <h3 class="subsection-title">NUESTROS VALORES</h3>
+      <h2 class="subsection-title" >NUESTROS VALORES</h2>
       <div class="values-grid">
         <div class="value-item">
           <div class="value-icon">
             <i class="fas fa-lightbulb"></i>
           </div>
-          <h4>Innovación</h4>
-          <p>
+          <h4 class="slides-title">Innovación</h4>
+          <p class="parrafo">
             Buscamos constantemente nuevas formas de resolver problemas y crear
             experiencias únicas.
           </p>
@@ -137,8 +124,8 @@
           <div class="value-icon">
             <i class="fas fa-hands-helping"></i>
           </div>
-          <h4>Colaboración</h4>
-          <p>
+          <h4 class="slides-title">Colaboración</h4>
+          <p class="parrafo">
             Trabajamos en equipo y con nuestros clientes para lograr los mejores
             resultados.
           </p>
@@ -147,8 +134,8 @@
           <div class="value-icon">
             <i class="fas fa-medal"></i>
           </div>
-          <h4>Excelencia</h4>
-          <p>
+          <h4 class="slides-title">Excelencia</h4>
+          <p class="parrafo">
             Nos comprometemos con la más alta calidad en cada proyecto que
             emprendemos.
           </p>
@@ -157,8 +144,8 @@
           <div class="value-icon">
             <i class="fas fa-heart"></i>
           </div>
-          <h4>Pasión</h4>
-          <p>
+          <h4 class="slides-title">Pasión</h4>
+          <p class="parrafo">
             Amamos lo que hacemos y eso se refleja en nuestro trabajo diario.
           </p>
         </div>
@@ -236,31 +223,84 @@
       </div>
     </div>
 
+
+    <!-- Footer -->
+     <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="logo">
+                        <a href="index.html">
+                            <span>ORVEX</span>SOLUTIONS
+                        </a>
+                    </div>
+                    <p>Transformando la educación con tecnología 3D avanzada y soluciones innovadoras.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/15ntqUbbmF/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/OrvexSolutions "><i class="fab fa-x"></i></a>
+                        <a href="https://www.linkedin.com/in/orvex-solutions-00138237a/"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/orvexsolutions/profilecard/?igsh=czF2b3o3bHRtNGgz "><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Enlaces rápidos</h3>
+                    <ul>
+                         <li><a href="index.html#home" class="nav-link">Inicio</a></li>
+                          <li><a href="index.html#about" class="nav-link">Nosotros</a></li>
+                          <li><a href="index.html#portfolio" class="nav-link">Productos</a></li>
+                          <li><a href="index.html#services" class="nav-link">Servicios</a></li>
+                           <li><a href="index.html#contact" class="nav-link">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Boletín</h3>
+                    <p>Suscríbete para recibir nuestras últimas noticias y ofertas.</p>
+                    <form id="newsletterForm">
+                        <input type="email" placeholder="Tu correo electrónico" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 ORVEX SOLUTIONS. Todos los derechos reservados.</p>
+                <div class="footer-legal">
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Términos y Condiciones</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Resto del contenido de nosotros.html -->
+    
     <script src="main.js"></script>
-    <!-- Persistencia de tema día/noche -->
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const themeToggle = document.getElementById("theme-toggle");
-        const savedTheme = localStorage.getItem("theme");
-        if (savedTheme === "dark") {
-          document.body.classList.add("dark-theme");
-          if (themeToggle) themeToggle.checked = true;
-        } else {
-          document.body.classList.remove("dark-theme");
-          if (themeToggle) themeToggle.checked = false;
-        }
-        if (themeToggle) {
-          themeToggle.addEventListener("change", function () {
-            if (this.checked) {
-              document.body.classList.add("dark-theme");
-              localStorage.setItem("theme", "dark");
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeToggle = document.getElementById('theme-toggle');
+            const savedTheme = localStorage.getItem('theme');
+            
+            if (savedTheme === 'dark') {
+                document.body.setAttribute('data-theme', 'dark');
+                if (themeToggle) themeToggle.checked = true;
             } else {
-              document.body.classList.remove("dark-theme");
-              localStorage.setItem("theme", "light");
+                document.body.setAttribute('data-theme', 'light');
+                if (themeToggle) themeToggle.checked = false;
             }
-          });
-        }
-      });
+            
+            if (themeToggle) {
+                themeToggle.addEventListener('change', function() {
+                    if (this.checked) {
+                        document.body.setAttribute('data-theme', 'dark');
+                        localStorage.setItem('theme', 'dark');
+                    } else {
+                        document.body.setAttribute('data-theme', 'light');
+                        localStorage.setItem('theme', 'light');
+                    }
+                });
+            }
+        });
     </script>
-  </body>
+</body>
 </html>

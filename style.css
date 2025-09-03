@@ -36,19 +36,6 @@
     --text-light: #E0E0E0;
 }
 
-/* Soporte para dark-theme por clase en el body */
-body.dark-theme {
-    --primary-bg: var(--dark-primary);
-    --secondary-bg: var(--dark-secondary);
-    --accent-color: var(--dark-accent);
-    --text-color: var(--dark-text);
-    background-color: var(--dark-bg) !important;
-    color: var(--dark-text) !important;
-}
-body.dark-theme #logo {
-    content: url("imagenes/logodes.png");
-}
-
 /* Tema claro activado */
 [data-theme="light"] {
     --primary-bg: var(--light-primary);
@@ -162,6 +149,18 @@ body[data-theme="light"] .about {
 body[data-theme="light"] .section-title {
     color: #333333 !important;
 }
+body[data-theme="light"] .subsection-title {
+    color: #333333 !important;
+}
+body[data-theme="light"] .slides-title {
+    color: #333333 !important;
+}
+
+body[data-theme="light"] .parrafo {
+    color: #333333 !important;
+}
+
+
 
 body[data-theme="light"] .mission-card,
 body[data-theme="light"] .vision-card,
@@ -189,6 +188,9 @@ body {
     color: var(--text-color);
 }
 
+body[data-theme="light"] .services-section {
+    background: #F3F3E0 !important;
+}
 /* Global Styles */
 * {
     margin: 0;
@@ -2773,3 +2775,40 @@ body[data-theme="light"] .footer-newsletter input {
         font-size: 1.2rem; /* Ajustado para tablet */
     }
 }
+
+
+/* ============================================ */
+/* COMPATIBILIDAD PARA PÁGINA NOSOTROS.HTML */
+/* ============================================ */
+
+/* Si usas la clase dark-theme en el body */
+body.dark-theme {
+    background-color: var(--dark-primary) !important;
+    color: var(--dark-text) !important;
+}
+
+
+body.dark-theme .logo a,
+body.dark-theme .nav-link,
+body.dark-theme .menu-toggle {
+    color: var(--white) !important;
+}
+
+/* Si usas data-theme="dark" en el body (como en index.html) */
+body[data-theme="dark"] {
+    background-color: var(--dark-primary);
+    color: var(--dark-text);
+}
+
+/* Asegurar que ambas implementaciones funcionen igual */
+body.dark-theme .section,
+body[data-theme="dark"] .section {
+    background-color: var(--dark-bg);
+}
+
+body.dark-theme .section-title,
+body[data-theme="dark"] .section-title {
+    color: var(--white);
+}
+
+/* Agrega más reglas según sea necesario para otras secciones */

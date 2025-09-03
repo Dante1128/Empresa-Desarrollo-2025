@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo Visualizador 3D</title>
+  <style>
+    body { margin:0; }
+    .demo-msg {
+      position: fixed; top: 0px; left: 0; right: 0; text-align: center; z-index: 10;
+      background: #133E87; color: #fff; padding: 12px; font-size: 1.1rem;
+    }
+    iframe { width: 100vw; height: 100vh; border: none; }
+  </style>
+</head>
+<body>
+  <div class="demo-msg">
+    Estás viendo una demo temporal. Serás redirigido en <span id="timer">30</span> segundos...
+  </div>
+  <iframe src="https://labphy.netlify.app/laboratorios"></iframe>
+  <script>
+    let seconds = 30; // Cambia el tiempo aquí (en segundos)
+    const timer = document.getElementById('timer');
+    const interval = setInterval(() => {
+      seconds--;
+      timer.textContent = seconds;
+      if (seconds <= 0) {
+        clearInterval(interval);
+        window.location.href = "index.html"; // O la página que quieras mostrar después
+      }
+    }, 1000);
+  </script>
+</body>
+</html>

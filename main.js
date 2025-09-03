@@ -8,7 +8,56 @@ window.addEventListener('load', function() {
         }, 500);
     }, 1000);
 });
+function createStars() {
+            const container = document.getElementById('starsContainer');
+            const colors = ['cyan', 'yellow', 'pink', 'purple', 'green'];
+            const sizes = ['small', 'medium', 'large'];
+            
+            // Crear 50 estrellas
+            for (let i = 0; i < 50; i++) {
+                const star = document.createElement('div');
+                star.className = `star ${sizes[Math.floor(Math.random() * sizes.length)]} ${colors[Math.floor(Math.random() * colors.length)]}`;
+                
+                // Posición aleatoria
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                
+                // Delay aleatorio para la animación
+                star.style.animationDelay = Math.random() * 4 + 's';
+                star.style.animationDuration = (Math.random() * 3 + 2) + 's, ' + (Math.random() * 10 + 5) + 's';
+                
+                container.appendChild(star);
+            }
+        }
 
+        // Inicializar las estrellas al cargar
+        createStars();
+
+        // Ocultar preloader después de 4 segundos
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                document.getElementById('preloader').classList.add('hidden');
+                setTimeout(() => {
+                    document.getElementById('mainContent').classList.add('visible');
+                }, 800);
+            }, 4000);
+        });
+
+        // Función para mostrar el preloader nuevamente
+        function showPreloader() {
+            const preloader = document.getElementById('preloader');
+            const mainContent = document.getElementById('mainContent');
+            
+            mainContent.classList.remove('visible');
+            preloader.classList.remove('hidden');
+            
+            setTimeout(() => {
+                preloader.classList.add('hidden');
+                setTimeout(() => {
+                    mainContent.classList.add('visible');
+                }, 800);
+            }, 3000);
+        }
 // Sticky Header
 window.addEventListener('scroll', function() {
     const header = document.querySelector('.header');

@@ -10,15 +10,25 @@
 </head>
 <body>
     <!-- Preloader -->
-    <div class="preloader">
-        <div class="loader">
-            <div class="loader-square"></div>
-            <div class="loader-square"></div>
-            <div class="loader-square"></div>
-            <div class="loader-square"></div>
-            <div class="loader-square"></div>
-            <div class="loader-square"></div>
-            <div class="loader-square"></div>
+    <div class="preloader" id="preloader">
+        <!-- Fondo nebuloso -->
+        <div class="nebula"></div>
+        
+        <!-- Partículas/Estrellas -->
+        <div class="stars-container" id="starsContainer"></div>
+        
+        <!-- Loader central -->
+        <div class="loader-container">
+            <div class="loader">
+                <div class="loader-square"></div>
+                <div class="loader-square"></div>
+                <div class="loader-square"></div>
+                <div class="loader-square"></div>
+                <div class="loader-square"></div>
+                <div class="loader-square"></div>
+                <div class="loader-square"></div>
+            </div>
+            <div class="loading-text"></div>
         </div>
     </div>
 
@@ -27,7 +37,7 @@
         <div class="container">
             <div class="logo">
                 <a href="#home">
-                    <img src="imagenes/logodes.png" alt="" class="logoimg">
+                    <img id="logo" src="imagenes/logodes.png" alt="Logo ORVEX" class="logoimg">
                     <span>ORVEX</span>SOLUTIONS
                 </a>
             </div>
@@ -70,7 +80,9 @@
         </div>
         <div class="hero-shape">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                <path fill="var(--dark-bg)" fill-opacity="1" d="M0,160L48,170.7C96,181,192,203,288,197.3C384,192,480,160,576,165.3C672,171,768,213,864,218.7C960,224,1056,192,1152,181.3C1248,171,1344,181,1392,186.7L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+                <path fill="var(--hero-shape-color)" fill-opacity="1"
+                d="M0,160L48,170.7C96,181,192,203,288,197.3C384,192,480,160,576,165.3C672,171,768,213,864,218.7C960,224,1056,192,1152,181.3C1248,171,1344,181,1392,186.7L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+                </path>
             </svg>
         </div>
     </section>
@@ -338,12 +350,12 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-about">
                     <div class="logo">
-                        <a href="#home">
+                        <a href="index.html">
                             <span>ORVEX</span>SOLUTIONS
                         </a>
                     </div>
@@ -356,23 +368,16 @@
                         <a href="#"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
-                <div class="carousel-track" id="carouselTrack">
-                    <div class="carousel-slide">
-                        <div class="logo-item">
-                            <img src="imagenes/descargablend.png" alt="" class="logoo">
-                            <h3 class="logo-name">Blender</h3>
-                        </div>
-                    </div>
-                    
-                    <!-- Slide 2 -->
-                    <div class="carousel-slide">
-                        <div class="logo-item">
-                            <img src="imagenes/frame.jpg" alt="" class="logoo">
-                            <h3 class="logo-name">A-frame</h3>
-                        </div>
-                    </div>
+                <div class="footer-links">
+                    <h3>Enlaces rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
                 </div>
-              
                 <div class="footer-newsletter">
                     <h3>Boletín</h3>
                     <p>Suscríbete para recibir nuestras últimas noticias y ofertas.</p>
@@ -393,6 +398,7 @@
             </div>
         </div>
     </footer>
+    
 
     <!-- Back to Top Button -->
     <a href="#home" class="back-to-top">

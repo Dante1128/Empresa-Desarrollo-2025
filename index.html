@@ -407,5 +407,32 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="3d-model.js"></script>
     <script src="main.js"></script>
+    <!-- Persistencia de tema día/noche -->
+    <script>
+      // Al cargar la página, aplicar el tema guardado
+      document.addEventListener('DOMContentLoaded', function() {
+        const themeToggle = document.getElementById('theme-toggle');
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+          document.body.classList.add('dark-theme');
+          if (themeToggle) themeToggle.checked = true;
+        } else {
+          document.body.classList.remove('dark-theme');
+          if (themeToggle) themeToggle.checked = false;
+        }
+        // Escuchar cambios en el switch
+        if (themeToggle) {
+          themeToggle.addEventListener('change', function() {
+            if (this.checked) {
+              document.body.classList.add('dark-theme');
+              localStorage.setItem('theme', 'dark');
+            } else {
+              document.body.classList.remove('dark-theme');
+              localStorage.setItem('theme', 'light');
+            }
+          });
+        }
+      });
+    </script>
 </body>
 </html>

@@ -917,6 +917,10 @@ img {
 
 
 /* Portfolio / Productos */
+#portfolio.section {
+  padding-top: 20px;   /* Ajusta el valor según lo que necesites */
+  padding-bottom: 60px;
+}
 .portfolio-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:25px}
 .portfolio-item{
   position:relative;border-radius:12px;overflow:hidden;box-shadow:0 10px 24px rgba(3, 104, 163, 0.486);
